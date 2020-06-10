@@ -1,0 +1,28 @@
+
+
+\usepackage[
+            math-style=ISO,
+            bold-style=ISO,
+            sans-style=italic,
+            partial=upright,
+            %slash-delimiter
+           ]{unicode-math}
+%\setmathfont[]{STIX2Math}
+\setmathfont{latinmodern-math.otf}
+\setmathfont[Path = /usr/share/fonts/OTF/,
+    range={"03B1-"03C9},
+    range={"1D6E2-"1D71B},
+    range=up/{greek},
+    Scale=MatchLowercase
+]{STIX2Math}
+\setmathfont[Path = /usr/share/fonts/otf-gfs/,
+    %range={"0391-"03A9},
+    range=up/{Greek},
+    Scale=MatchUppercase
+]{GFSDidot}
+%%]{GFS Garaldus}
+\setmathfont[
+    range={"0030-"0039},
+    %range=num,
+    Scale=0.9
+]{Linux Libertine O}

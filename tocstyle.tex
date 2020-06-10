@@ -1,0 +1,9 @@
+
+
+\usepackage[tocindentauto]{tocstyle}
+\newtocstyle[KOMAlike][leaders]{mystyle}{%
+  \settocfeature{leaders}{\mbox{~–~}}%
+  \settocfeature{parfillskip}{0pt plus 1fil}%
+  \settocfeature{pagenumberbox}{\hbox}%
+}
+\usetocstyle[toc]{mystyle}

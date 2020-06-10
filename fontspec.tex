@@ -1,0 +1,69 @@
+
+\usepackage[no-math,no-config]{fontspec}
+
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+\setmonofont{Source Code Pro}
+
+\defaultfontfeatures[Linux Libertine O]{
+    Ligatures={Rare},
+}
+\defaultfontfeatures[Source Code Pro]{
+  Mapping=tex-ansi,
+  Scale=0.9
+}
+
+\newfontfamily\vollkornfont{Vollkorn}[
+  Scale = 1.2,
+  Path = /home/n/data/font/PS-OTF/,
+  UprightFont = *-Regular,
+  BoldFont = *-Semibold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BlackItalic
+  %BoldItalicFont = *-BoldItalic
+]
+%%\newcommand\textvollkorn[1]{{\fontvollkorn #1}}
+
+%%\newfontfamily\fontfira{FiraSans}[
+%%  Path = /home/n1/font/FiraFonts4104/OTF/,
+%%  UprightFont = *-Regular,
+%%  BoldFont = *-Bold,
+%%  ItalicFont = *-Italic,
+%%  BoldItalicFont = *-BoldItalic
+%%  %SlantedFont = 
+%%  %BoldSlantedFont =
+%%]
+%%\newcommand\textfira[1]{{\fontfira #1}}
+
+%%\newfontfamily\fontfiraU{FiraSans}[
+%%  Path = /home/n1/font/FiraFonts4104/OTF/,
+%%  UprightFont = *-ExtraBold,
+%%  BoldFont = *-Heavy,
+%%  ItalicFont = *-HeavyItalic,
+%%  BoldItalicFont = *-ExtraBoldItalic
+%%]
+%%\newcommand\textfiraU[1]{{\fontfiraU #1}}
+
+%%\newfontface\fontquesta{questa}[
+%%  Path = /home/n1/font/Questa/,
+%%  UprightFont = *-Regular
+%%]
+%%\newcommand\textquesta[1]{{\fontquesta #1}}
+
+%%\newfontface\fontquestasans{2-Questa_Sans}[
+%%  Path = /home/n1/font/Questa/,
+%%  UprightFont = *_Regular
+%%]
+%%\newcommand\textquestasans[1]{{\fontquestasans #1}}
+
+%%\newfontface\fontquestagrande{2-Questa_Grande}[
+%%  RawFeature={+liga,+kern},
+%%  Path = /home/n1/font/Questa/,
+%%  UprightFont = *_Regular
+%%]
+%%\newcommand\textquestagrande[1]{{\fontquestagrande #1}}
+
+%\newfontface\fontcharis{CharisSILCompact}[
+%  Path = /home/n1/font/CharisSIL/comp/,
+%  UprightFont = *-R
+%]

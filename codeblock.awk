@@ -9,4 +9,8 @@
   gsub("[}]","\\}");
   gsub("[~]","\\textasciitilde ");
   gsub("[\\^]","\\textasciicircum ");
-  printf "\\phantom{}%s \\newline ", $0}
+  match($0, /^ */);
+  printf "\\phantom{"
+  for (i=0; i<RLENGTH; i=i+1) printf("X");
+  printf "}%s \\newline ", substr($0,RLENGTH+1)
+}

@@ -1,0 +1,31 @@
+
+
+% https://tex.stackexchange.com/questions/83037/difference-between-ref-varioref-and-cleveref-decision-for-a-thesis
+\usepackage{varioref}
+\usepackage[setpagesize=false, % page size defined by xetex
+            unicode=false, % unicode breaks when used with xetex
+            xetex,
+%   hidelinks,
+           ]{hyperref}
+\hypersetup{%breaklinks=true,
+%            bookmarks=true,
+%            pdfauthor={$author-meta$},
+%            pdftitle={$title-meta$},
+            colorlinks=true,
+%            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
+%            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
+%            linkcolor=$if(linkcolor)$$linkcolor$$else$black$endif$,
+%            pdfborder={0 0 0}
+}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[figure]{hypcap}
+\usepackage[
+   noabbrev,
+   nameinlink,
+]{cleveref}
+
+\makeatletter
+   \patchcmd\cref@old@@vpageref
+      {\advance\@tempcnta-2}
+      {\advance\@tempcnta-2 }{\typeout{patch ok}}{\ERRORpatchFaild}
+\makeatother

@@ -1,6 +1,17 @@
 
 \usepackage[no-math,no-config]{fontspec}
 
+\newfontfamily\vollkornfont{Vollkorn}[
+  Scale = 1.2,
+  Path = /home/n/data/font/PS-OTF/,
+  UprightFont = *-Regular,
+  BoldFont = *-Semibold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BlackItalic
+  %BoldItalicFont = *-BoldItalic
+]
+%%\newcommand\textvollkorn[1]{{\fontvollkorn #1}}
+
 \setmainfont{Linux Libertine O}
 \setsansfont{Linux Biolinum O}
 \setmonofont{Source Code Pro}
@@ -12,17 +23,6 @@
   Mapping=tex-ansi,
   Scale=0.9
 }
-
-\newfontfamily\vollkornfont{Vollkorn}[
-  Scale = 1.2,
-  Path = /home/n/data/font/PS-OTF/,
-  UprightFont = *-Regular,
-  BoldFont = *-Semibold,
-  ItalicFont = *-Italic,
-  BoldItalicFont = *-BlackItalic
-  %BoldItalicFont = *-BoldItalic
-]
-%%\newcommand\textvollkorn[1]{{\fontvollkorn #1}}
 
 %%\newfontfamily\fontfira{FiraSans}[
 %%  Path = /home/n1/font/FiraFonts4104/OTF/,
@@ -44,10 +44,10 @@
 %%]
 %%\newcommand\textfiraU[1]{{\fontfiraU #1}}
 
-%%\newfontface\fontquesta{questa}[
-%%  Path = /home/n1/font/Questa/,
-%%  UprightFont = *-Regular
-%%]
+%\newfontface\fontquesta{questa}[
+%  Path = /home/n/data/font/Questa/,
+%  UprightFont = *-Regular
+%]
 %%\newcommand\textquesta[1]{{\fontquesta #1}}
 
 %%\newfontface\fontquestasans{2-Questa_Sans}[

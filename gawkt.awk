@@ -1,5 +1,5 @@
 
-BEGIN {print "include(`./m4ddata/def.m4')"}
+BEGIN {print "include(`./m4ddata/def.m4')"; print "dnl"}
 NR==1 && /^---$/ {count=0;}
 /^---$/,/^---$/ {count=count+1; printf "macro%s",count; next}
 !/^m4/ {print "¹"$0"²"}\

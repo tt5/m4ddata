@@ -8,3 +8,4 @@ define(¹macro2²,¹)²)
 
 define(¹q²,¹\quad²)
 define(¹s²,¹$\star$²)
+define(¹0²,¹²)

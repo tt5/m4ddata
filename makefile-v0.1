@@ -1,0 +1,38 @@
+# v.0.1
+MAKEFLAGS += --no-builtin-rules
+.SUFFIXES:            # Delete the default suffixes
+.SUFFIXES: .tex .pdf .md .m4   # Define our suffix list
+.PRECIOUS: %.m4 %.md
+
+files := $(wildcard *.m4d)
+files2 := $(wildcard *.m4)
+
+all: $(files:.m4d=.pdf) $(files2:.m4=.md)
+
+md: $(files:.m4d=.md)
+pdf: $(files:.m4d=.pdf)
+
+%.m4: %.m4d
+	./prepm4.sh $*
+#	awk '/^---/ {x="F"++i".some";next}{print > x;}' $*.m4d
+#	awk -b -f ./m4ddata/gawkt.awk F2.some > $*.m4
+
+%.md: %.m4
+	touch $*-in.fm
+	printf -- '---\n' > $*-in.fm
+	printf -- 'title: notes\n' >> $*-in.fm
+	printf -- 'date: ' >> $*-in.fm
+	date --rfc-3339="date" >> $*-in.fm
+	printf -- '---\n' >> $*-in.fm
+	m4 $*.m4 > $*-in.md
+	sed -i '1,/[^[:space:]]/ d' $*-in.md
+	cat $*-in.fm $*-in.md > $*-in-fm.md
+
+%.pdf: %.md
+	touch header.tex
+	mv $*-in.md in.md
+	lua ./m4ddata/mymarkdown.lua
+	xelatex --shell-escape -halt-on-error --jobname=$* "\def\varFilename{$*}\input template.tex"
+
+clean:
+

@@ -1,0 +1,43 @@
+%\listfiles
+\input ./m4ddata/komascript.tex
+%\usepackage{xparse}
+\input ./m4ddata/markdown.tex
+\usepackage{siunitx}
+%\input ./m4ddata/chemie.tex
+\input ./m4ddata/fontspec.tex
+%\input ./m4ddata/polyglossia.tex
+\input ./m4ddata/unicode-math.tex
+%\input ./m4ddata/tocstyle.tex
+
+%\def \varTitle {default}
+%\def \varAuthor {default}
+%\input ./outfromfile.tex
+\usepackage{microtype}
+%\emergencystretch.3\textwidth
+%\usepackage{tikz}
+%\usetikzlibrary{matrix}
+
+\usepackage{mathtools}
+
+\newcommand*{\diffdchar}{\mathrm{d}}    % or {ⅆ}, or {\mathrm{d}}, or whatever standard you’d like to adhere to
+\newcommand*{\dd}{\mathop{\diffdchar\!}}
+\catcode`\ⅆ=\active
+\letⅆ=\dd
+
+\def \q {\quad}
+\def \star {\char`*}
+\def \dollar {\char`$}
+\def \textambersand {\&}
+\def \varTitle {title}
+\def \varAuthor {}
+\input header.tex
+
+\begin{document}
+\title{\varTitle}
+\author{\varAuthor}
+\date{\today}
+\maketitle
+%\tableofcontents
+%\markdownInput{in.md}
+\input cache/some.md.tex
+\end{document}

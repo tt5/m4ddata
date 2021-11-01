@@ -602,5 +602,5 @@ function M.new(options)
 end
 
 local convert = M.new({})
-local input = assert(io.open("in.md", "r"):read("*a"))
+local input = assert(io.open(arg[1], "r"):read("*a")) -- "*a" returns all the content of md file
 print(convert(input .. "\n"))

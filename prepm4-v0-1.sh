@@ -7,6 +7,7 @@ else
   #echo "\def \\vartitle {title}" > header.tex
   echo "no title"
 fi
+cp F1.some $1-F1.some
 awk -b -f ./m4ddata/gawkt.awk F2.some > $1.m4
 touch $1-md.m4
 cat $1.m4 > $1-md.m4
